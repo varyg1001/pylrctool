@@ -4,7 +4,7 @@ Library to create and modify lrc files.
 
 # Functionality
 
-- parse lrc files and modify theme
+- parse lrc files and modify them
 - export to srt file
 - create new lrc files
 

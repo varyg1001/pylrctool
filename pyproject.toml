@@ -1,6 +1,7 @@
 [project]
 name = "pylrctool"
 version = "0.1.0"
+authors = [{ name = "varyg" }]
 description = "Library to create and modify lrc files."
 readme = "README.md"
 requires-python = ">=3.11"
