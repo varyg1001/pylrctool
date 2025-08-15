@@ -60,13 +60,16 @@ class LRCFile(SortedKeyList):
             if event.repeat_time:
                 repeat_time_end = timedelta(seconds=event.repeat_time.total_seconds())
 
-            if index + 1 < data_len:
-                end = timedelta(seconds=self[index + 1].time.total_seconds())
+            if index < data_len:
+                end = timedelta(seconds=self[index].time.total_seconds())
             else:
                 end = start + timedelta(seconds=5)
 
             srt_line = srt.Subtitle(
-                index=index, content=event.data, start=start, end=repeat_time_end or end
+                index=index + 1,
+                content=event.data,
+                start=start,
+                end=repeat_time_end or end,
             )
 
             srt_data.append(srt_line)
